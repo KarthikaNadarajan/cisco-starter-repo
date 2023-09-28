@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import './Exhibit.css';
+
 class Exhibit extends Component {
-  render() {
-    return (
-    <div class="row">
-        <div class="column">
-            <h3>{this.props.heading}</h3>
-            <p>{this.props.content}</p>
-        </div>
-    </div>
-    );
-  }
+    render() {
+        return (
+            <div className="Exhibit">
+                <h2 className="ExhibitHeading">{this.props.name}</h2>
+                <div className="ExhibitContent">
+                    {this.props.children}
+                </div>
+            </div>
+        );
+    }
 }
+
 export default Exhibit;
